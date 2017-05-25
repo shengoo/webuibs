@@ -1,4 +1,6 @@
 @import "variable";
+@import "grid";
+@import "alert";
 
 html,html body{
 	margin: 0;
@@ -15,7 +17,7 @@ html,html body{
     flex-direction: column;
     width: 100%;
     height: 100%;
-    header{
+    .navbar {
         height: @header-height;
         background: @header-bg-color;
         display: flex;
@@ -23,7 +25,69 @@ html,html body{
         padding-left: @edge-padding;
         padding-right: @edge-padding;
     }
-    main{
+    .main{
         margin-top: 1px;
+        flex: 1;
     }
 }
+
+.content-block header .header-actions-right{
+    float: right;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding-right: @edge-padding;
+    display: flex;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    &::before{
+        display: table;
+        content: " ";
+    }
+    &::after{
+        display: table;
+        content: " ";
+        clear: both;
+    }
+}
+
+label{
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.has-error .checkbox, .has-error .checkbox-inline, .has-error .control-label, .has-error .help-block, .has-error .radio, .has-error .radio-inline, .has-error.checkbox label, .has-error.checkbox-inline label, .has-error.radio label, .has-error.radio-inline label {
+    color: @error-color;
+}
+
+.has-error .form-control {
+    border-color: @error-color;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+}
+.help-block {
+     display: block;
+     margin-top: 5px;
+     margin-bottom: 10px;
+     color: #737373;
+ }
+
+.form-horizontal .control-label {
+    //padding-top: 7px;
+    //margin-bottom: 0;
+    text-align: right;
+}
+
+
+
