@@ -29,7 +29,17 @@ html,html body{
     .main{
         margin-top: 1px;
         flex: 1;
-				overflow: auto;
+		overflow: auto;
+        display: flex;
+        .content-block{
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            .content{
+                flex: 1;
+                overflow: auto;
+            }
+        }
     }
 }
 
