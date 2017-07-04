@@ -1,0 +1,92 @@
+@animation-duration: 1000ms;
+.cell.up {
+    animation-name:up1;
+    animation-duration: @animation-duration;
+}
+
+.cell.down {
+    animation-name:down1;
+    animation-duration: @animation-duration;
+}
+
+.colorblind .cell.up {
+    animation-name: up2;
+}
+
+.colorblind .cell.down {
+    animation-name: down2;
+}
+
+.apac1 .cell.up {
+    animation-name: up3;
+}
+
+.apac1 .cell.down {
+    animation-name: down3;
+}
+
+.apac2 .cell.up, .emea .cell.up {
+    animation-name:up4;
+}
+
+.apac2 .cell.down, .emea .cell.down {
+    animation-name:down4;
+}
+
+/* default */
+@keyframes up1 {
+    from {background-color: rgba(57, 196, 110, 0.7);color:white;}
+}
+@-webkit-keyframes up1 {
+    from {background-color: rgba(57, 196, 110, 0.7);color:white;}
+}
+/* colorblind */
+@keyframes up2 {
+    from {background-color: rgba(96, 126, 255, 0.7);color:white;}
+}
+@-webkit-keyframes up2 {
+    from {background-color: rgba(96, 126, 255, 0.7);color:white;}
+}
+/* apac1 */
+@keyframes up3 {
+    from {background-color: rgba(245, 71, 91, 0.7);color:white;}
+}
+@-webkit-keyframes up3 {
+    from {background-color: rgba(245, 71, 91, 0.7);color:white;}
+}
+/* apac2 emea */
+@keyframes up4 {
+    from {background-color: rgba(47, 180, 200, 0.7);color:white;}
+}
+@-webkit-keyframes up4 {
+    from {background-color: rgba(47, 180, 200, 0.7);color:white;}
+}
+
+/* default */
+@keyframes down1 {
+    from {background-color: rgba(245, 71, 91, 0.7);color:white;}
+}
+@-webkit-keyframes down1 {
+    from {background-color: rgba(245, 71, 91, 0.7);color:white;}
+}
+/* colorblind */
+@keyframes down2 {
+    from {background-color: rgba(255, 99, 51, 0.7);color:white;}
+}
+@-webkit-keyframes down2 {
+    from {background-color: rgba(255, 99, 51, 0.7);color:white;}
+}
+/* apac1 */
+@keyframes down3 {
+    from {background-color: rgba(57, 196, 110, 0.7);color:white;}
+}
+@-webkit-keyframes down3 {
+    from {background-color: rgba(57, 196, 110, 0.7);color:white;}
+}
+/* apac2 emea */
+@keyframes down4 {
+    from {background-color: rgba(245, 71, 91, 0.7);color:white;}
+}
+@-webkit-keyframes down4 {
+    from {background-color: rgba(245, 71, 91, 0.7);color:white;}
+}
